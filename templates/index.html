@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static',filename='favicon.ico') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='styles.css') }}"
+    />
+    <title>HealthCure: Disease Prediction</title>
+  </head>
+
+  <body>
+    <p class="box"></p>
+    <div class="header">
+      <h1 style="color: white; font-size: 175%">
+        HealthCure: Disease Prediction using Machine Learning
+      </h1>
+    </div>
+
+    <div class="nav_menu">
+      <a href="#">Home</a>
+      <a href="/history">Predictions</a>
+      <a href="/about">About Us</a>
+    </div>
+    <br />
+
+    <form action="/web-WEB/predict" method="post">
+      <details class="expandable-section">
+        <summary class="section-heading">
+          Enter your Personal information : Click to Expand
+        </summary>
+        <div class="expandable-section-content">
+          <div>
+            <label for="UserName">Enter your Name:</label>
+            <input
+              type="text"
+              name="UserName"
+              placeholder="Name..."
+              value="NAME"
+            /><br />
+            <label for="UserAge">Enter your Age:</label>
+            <input
+              type="number"
+              name="UserAge"
+              placeholder="Age..."
+              value="25"
+            /><br />
+            <label for="EMAIL">E-Mail Address:</label>
+            <input
+              type="email"
+              name="EMAIL"
+              placeholder="E-mail Address...(Optional)"
+            /><br />
+          </div>
+        </div>
+      </details>
+
+      <details class="expandable-section">
+        <summary class="section-heading">
+          Enter the Symptoms to each Entries : Click to Expand
+        </summary>
+        <div class="expandable-section-content">
+          <div class="symptoms-container">
+            <!-- Your symptoms dropdowns -->
+            <div class="symptoms-dropdown">
+              <label for="Symptom1">Symptom 1:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom1"
+                placeholder="Select Symptom 1"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom2">Symptom 2:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom2"
+                placeholder="Select Symptom 2"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom3">Symptom 3:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom3"
+                placeholder="Select Symptom 3"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom4">Symptom 4:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom4"
+                placeholder="Select Symptom 4"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom5">Symptom 5:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom5"
+                placeholder="Select Symptom 5"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom6">Symptom 6:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom6"
+                placeholder="Select Symptom 6"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom7">Symptom 7:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom7"
+                placeholder="Select Symptom 7"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom8">Symptom 8:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom8"
+                placeholder="Select Symptom 8"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom9">Symptom 9:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom9"
+                placeholder="Select Symptom 9"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom10">Symptom 10:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom10"
+                placeholder="Select Symptom 10"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom11">Symptom11:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom11"
+                placeholder="Select Symptom 11"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom12">Symptom 12:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom12"
+                placeholder="Select Symptom 12"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom13">Symptom 13:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom13"
+                placeholder="Select Symptom 13"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom14">Symptom 14:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom14"
+                placeholder="Select Symptom 14"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom5">Symptom 15:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom15"
+                placeholder="Select Symptom 15"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom16">Symptom 16:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom16"
+                placeholder="Select Symptom 16"
+              />
+            </div>
+            <div class="symptoms-dropdown">
+              <label for="Symptom17">Symptom 17:</label>
+              <input
+                list="Sympto_list"
+                name="Symptom17"
+                placeholder="Select Symptom 17"
+              />
+            </div>
+          </div>
+
+          <datalist id="Sympto_list">
+            {% for i in symptons %}
+            <option value="{{ symptons[i] }}">{{ i }}</option>
+            {% endfor %}
+          </datalist>
+        </div>
+      </details>
+
+      <div class="footer">
+        <p>
+          <label style="font-size: 150%; color: white" for="TopN">
+            Enter the Top N-Value as:
+          </label>
+          <input
+            style="width: 15%; margin-right: 300px; font-size: 150%"
+            type="number"
+            name="TopN"
+            placeholder="Value of N (1 to 5)"
+            max="5"
+            min="1"
+            value="5"
+            required
+          />
+
+          <button style="font-size: 150%; border-radius: 5px" type="submit">
+            Predict
+          </button>
+        </p>
+      </div>
+    </form>
+  </body>
+</html>

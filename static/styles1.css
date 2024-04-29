@@ -1,0 +1,76 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+  background-image: url('national-cancer-institute-NFvdKIhxYlU-unsplash.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #4d8c8f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav_menu {
+  background-color: rgba(77, 140, 143, 0.7);
+  overflow: hidden;
+  border-radius: 0 0 30px 30px;
+  padding: 10px 0;
+}
+
+.nav_menu a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: inline-block;
+}
+
+.nav_menu a:hover {
+  background-color: #235f61;
+}
+
+.symp {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #4d8c8f;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #d1e9eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.symp h2, .symp p {
+  margin-bottom: 10px;
+}
+
+.disease {
+  font-size: 1em;
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.disease:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction History</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+        background-image: url("/static/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg");
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        background-color: #4d8c8f;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .nav_menu {
+        background-color: rgba(77, 140, 143, 0.7);
+        overflow: hidden;
+        border-radius: 0 0 30px 30px;
+        padding: 10px 0;
+      }
+
+      .nav_menu a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 16px;
+        display: inline-block;
+      }
+
+      .nav_menu a:hover {
+        background-color: #235f61;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      /* Set background color for table rows */
+      table tbody tr {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Prediction History</h1>
+      </div>
+      <div class="nav_menu">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <!-- Add the About Us button -->
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Symptoms</th>
+            <th>Predicted Diseases</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in history_data %}
+          <tr>
+            <td>{{ row['Symptoms'] }}</td>
+            <td>{{ row['Predicted_Diseases'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

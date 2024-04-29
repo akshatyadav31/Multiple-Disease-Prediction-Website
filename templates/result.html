@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles1.css') }}"
+    />
+    <title>Disease Prediction Result</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Disease Prediction Model</h1>
+      </div>
+      <div class="nav_menu">
+        <a href="/">Home</a>
+        <a href="/history">Predictions</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="symp">
+        <h2>Disease Prediction Result:</h2>
+        <div class="result-container">
+          <p>Top {{ topvalue }} Possible Diseases are:</p>
+          <div class="disease-list">
+            {% for disease in top5_diseases %}
+            <div class="disease">{{ disease }}</div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

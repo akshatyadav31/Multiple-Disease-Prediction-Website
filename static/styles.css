@@ -1,0 +1,297 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    background-image: url('/static/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  
+
+.box {
+    display: none; /* Hide the box */
+}
+
+.header {
+    background-color: #4d8c8f; /* Dark blue-green for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav_menu {
+    background-color: rgba(77, 140, 143, 0.7); /* Dark blue-green with 70% opacity */
+    overflow: hidden;
+    border-radius: 0 0 30px 30px;
+    padding: 10px 0;
+}
+
+.nav_menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-block;
+}
+
+.nav_menu a:hover {
+    background-color: #235f61; /* Darker blue-green on hover */
+}
+
+.symp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.symp div {
+    background-color: #aabfb9; /* Light grey-green for symptom box */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #4d8c8f; /* Dark blue-green for footer */
+    color: white;
+    padding: 12px;
+    border-radius: 25px 25px 0 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+label {
+    color: white;
+    margin-right: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #4d8c8f; /* Dark blue-green border */
+    border-radius: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #437c7f; /* Dark blue-green for button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Add box shadow for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+button:hover {
+    background-color: #235f61; /* Darker blue-green shade on hover */
+}
+
+
+/* Additional styles */
+.step-summary {
+    text-align: center; /* Center the text */
+    font-size: 1.2em; /* Adjust the font size */
+    color: #4d8c8f; /* Dark blue-green text color */
+    margin-bottom: 20px; /* Add space below the summary */
+    padding: 20px; /* Add padding */
+    background-color: #d1e9eb; /* Light blue-green background color */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+
+.step-title {
+    font-weight: bold;
+    font-size: 3em; /* Increase the font size */
+    margin: 10px auto; /* Center the title */
+}
+
+/* Additional styles for the personal information section */
+.step-title {
+    font-weight: bold;
+    font-size: 5em; /* Larger font size */
+    margin: 20px auto; /* Centered with larger margin */
+    color: #235f61; /* Dark blue-green */
+}
+
+.step-summary {
+    font-size: 1.2em; /* Larger font size for summary */
+    color: #4d8c8f; /* Dark blue-green */
+    margin-bottom: 20px; /* Add space below the summary */
+}
+
+.step-summary::before {
+    content: "\1F464"; /* Unicode for person emoji */
+    font-size: 1.5em; /* Larger emoji size */
+    margin-right: 10px; /* Space between emoji and text */
+}
+
+
+
+
+
+
+
+/* CSS for the expandable section */
+.expandable-section {
+    width: 50%; /* Set width of the expandable section */
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    opacity: 0.9; /* Set opacity to make it translucent */
+}
+
+/* CSS for the summary */
+.section-heading {
+    color: #4d8c8f; /* Dark blue-green text color */
+    background-color: #d1e9eb; /* Light blue-green background color */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer for better user interaction */
+}
+
+/* CSS for the content */
+.expandable-section-content {
+    background-color: #f2f2f2; /* Light gray background color */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* CSS for labels */
+label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Add some space between labels */
+    font-weight: bold; /* Make labels bold */
+    color: #235f61; /* Darker shade for label text */
+}
+
+
+
+/* CSS for symptoms container */
+.symptoms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+/* CSS for each symptom */
+.symptom {
+    margin-bottom: 10px;
+}
+
+/* CSS for labels */
+label {
+    color: #235f61; /* Darker shade for label text */
+}
+
+/* CSS for inputs */
+input {
+    width: calc(100% - 10px); /* Adjust width of input */
+}
+
+/* CSS for the expandable section */
+.expandable-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent background color */
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 10%; /* Adjust margin as needed */
+}
+
+
+/* CSS for symptoms container */
+.symptoms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 4px;
+}
+
+/* CSS for each symptom */
+.symptom {
+    margin-bottom: 10px;
+}
+
+/* CSS for labels */
+label {
+    color: #235f61; /* Darker shade for label text */
+}
+
+/* CSS for inputs */
+input {
+    width: calc(100% - 10px); /* Adjust width of input */
+}
+
+/* CSS for datalist */
+datalist {
+    position: absolute; /* Position the datalist absolutely */
+    z-index: 1; /* Ensure it appears above other elements */
+    background-color: #fff; /* Set background color */
+    border: 1px solid #ccc; /* Add border for visibility */
+}
+
+/* CSS for the expandable section */
+.expandable-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent background color */
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto; /* Center the section horizontally */
+    max-width: 600px; /* Adjust max-width as needed */
+}
+
+.expandable-section-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-heading {
+    font-weight: bold;
+    color: #333;
+}
+
+.symptoms-container {
+    height: 200px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+    margin-bottom: 2px;
+}
+
+.symptoms-dropdown {
+    margin-bottom: 1px;
+}
+
+.symptoms-dropdown label {
+    display: block;
+    margin-bottom: 1px;
+}
+
+.symptoms-dropdown input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
