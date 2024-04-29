@@ -1,0 +1,35 @@
+# Automated Disease Diagnosis System
+
+This project aims to develop an automated disease diagnosis system using machine learning and web development technologies. The system allows users to input their symptoms and receive predictions of possible diseases based on a trained machine learning model.
+
+## Features
+
+- **Symptom Input**: Users can submit their symptoms through a web form.
+- **Disease Prediction**: Machine learning model predicts possible diseases based on the input symptoms.
+- **Top N Predictions**: Users can specify the number of top predicted diseases they want to receive.
+- **User-Friendly Interface**: Web interface for easy interaction and input submission.
+- **Real-Time Results**: Predictions are generated in real-time and displayed to the user.
+
+## Technologies Used
+
+- **Python Libraries**:
+  - pandas: Data manipulation and analysis
+  - numpy: Numerical computing
+  - scikit-learn: Machine learning
+  - flask: Web development
+- **HTML/CSS**: Frontend design and layout
+- **Firebase Realtime Database**: Storage and retrieval of symptom and disease prediction data
+
+## How to Run
+
+1. Install the required Python libraries using `pip install -r requirements.txt`.
+2. Run the Flask web application using `python app.py`.
+3. Access the application through the provided URL.
+
+## Usage
+
+1. Open the web application in a browser.
+2. Fill out the symptom form with your symptoms.
+3. Specify the number of top predicted diseases you want to receive.
+4. Submit the form and wait for the predictions to appear.
+
